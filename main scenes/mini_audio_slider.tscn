@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://dn52pjjyj4sh1"]
+
+[ext_resource type="Texture2D" uid="uid://bkti544gmsyxy" path="res://assets/7.0 assets/Screenshot_2026-02-28_at_1.49.42_PM-removebg-preview.png" id="1_vdnw5"]
+[ext_resource type="Script" uid="uid://d26sqv2ilrxk1" path="res://scripts/audio_slider.gd" id="3_0d75s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ujnq"]
+atlas = ExtResource("1_vdnw5")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31h8q"]
+bg_color = Color(0.40784314, 0.34509805, 0.8117647, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62m5r"]
+bg_color = Color(0.26666668, 0.20392157, 0.5803922, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5m4b"]
+bg_color = Color(0.40784314, 0.34509805, 0.8117647, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="Theme" id="Theme_62m5r"]
+HSlider/icons/grabber = SubResource("AtlasTexture_8ujnq")
+HSlider/icons/grabber_highlight = ExtResource("1_vdnw5")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_31h8q")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_62m5r")
+HSlider/styles/slider = SubResource("StyleBoxFlat_w5m4b")
+
+[node name="AudioSlider" type="HSlider"]
+offset_right = 657.0
+offset_bottom = 402.0
+mouse_default_cursor_shape = 6
+theme = SubResource("Theme_62m5r")
+max_value = 1.0
+step = 0.001
+script = ExtResource("3_0d75s")
+
+[connection signal="value_changed" from="." to="." method="_on_value_changed"]

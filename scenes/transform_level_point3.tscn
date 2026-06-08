@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu8a8gwjnmwv4"]
+
+[ext_resource type="Script" uid="uid://d0f5grfu7tg5n" path="res://scripts/transform_level_point_3.gd" id="1_x75ll"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cayyv"]
+size = Vector2(51, 91)
+
+[node name="Transform Level Point" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_x75ll")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15.5, -35.5)
+shape = SubResource("RectangleShape2D_cayyv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

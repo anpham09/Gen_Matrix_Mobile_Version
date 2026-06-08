@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpagcp71sy7sy"]
+
+[ext_resource type="AudioStream" uid="uid://nstgi7dp5w6i" path="res://assets/3.0 assets/BGM_Strings.mp3" id="1_8pmnx"]
+[ext_resource type="Script" uid="uid://dfw5mug73ag3o" path="res://scripts/theme_3_bg_music.gd" id="2_8pmnx"]
+
+[node name="Theme3_BgMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_8pmnx")
+bus = &"Music"
+script = ExtResource("2_8pmnx")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

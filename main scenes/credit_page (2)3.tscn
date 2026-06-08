@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://btaafsrs1kice"]
+
+[ext_resource type="Script" uid="uid://d5lyi806755j" path="res://scripts/credit_page_(2)3.gd" id="1_60eot"]
+[ext_resource type="PackedScene" uid="uid://cwdfk5fi6mcmb" path="res://main scenes/main_bg_music.tscn" id="2_8a17p"]
+[ext_resource type="Texture2D" uid="uid://dhmgu85ukhjvt" path="res://assets/5.0 assets/Homescreen 2.0.png" id="2_t86vx"]
+[ext_resource type="Texture2D" uid="uid://b8th0wf7w26rn" path="res://assets/2.0 assets/credits.png" id="3_8a17p"]
+[ext_resource type="AudioStream" uid="uid://bvpnxq0bdk5o5" path="res://assets/music/Descension.mp3" id="3_jlfmr"]
+[ext_resource type="Texture2D" uid="uid://barpgjxno7vsd" path="res://assets/2.0 assets/back_button.png" id="4_jlfmr"]
+[ext_resource type="Texture2D" uid="uid://ckqiq5fcyiqlf" path="res://assets/7.0 assets/measure.png" id="7_jlfmr"]
+
+[node name="Credit Page" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_60eot")
+
+[node name="Main_BgMusic" parent="." instance=ExtResource("2_8a17p")]
+stream = ExtResource("3_jlfmr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1380.0
+offset_bottom = 868.0
+
+[node name="Home Screen" type="Sprite2D" parent="."]
+position = Vector2(1336, 754.49994)
+scale = Vector2(1.7920002, 1.7144443)
+texture = ExtResource("2_t86vx")
+
+[node name="Credit" type="Sprite2D" parent="."]
+position = Vector2(1345, 729.50006)
+scale = Vector2(1.7853334, 1.772222)
+texture = ExtResource("3_8a17p")
+
+[node name="BackButton" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -2.0
+offset_top = 1313.0
+offset_right = 321.0
+offset_bottom = 1525.0
+mouse_default_cursor_shape = 2
+
+[node name="BackButtonImage" type="Sprite2D" parent="."]
+position = Vector2(150.00002, 1415.0001)
+scale = Vector2(0.11601681, 0.08901074)
+texture = ExtResource("4_jlfmr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1145.0001, 614.99994)
+scale = Vector2(2.0400002, 1.9136844)
+texture = ExtResource("7_jlfmr")
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

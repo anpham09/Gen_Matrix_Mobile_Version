@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://diroovththepy"
+path="res://.godot/imported/Touch Reward.wav-94393dd5c8e2d0ee9a2e2cfb1fe262a3.sample"
+
+[deps]
+
+source_file="res://assets/sprites/customed sprites/sounds/Touch Reward.wav"
+dest_files=["res://.godot/imported/Touch Reward.wav-94393dd5c8e2d0ee9a2e2cfb1fe262a3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

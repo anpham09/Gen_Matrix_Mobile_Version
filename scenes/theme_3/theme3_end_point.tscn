@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr33buke6qjjd"]
+
+[ext_resource type="Script" uid="uid://dxgom7iauebjo" path="res://scripts/theme_3_end_point.gd" id="1_ukwbw"]
+[ext_resource type="Texture2D" uid="uid://cmh2recbt0jha" path="res://assets/sprites/customed sprites/try/image.png" id="2_uxfe3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fs12u"]
+size = Vector2(140, 362)
+
+[node name="end_point" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_ukwbw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_fs12u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_uxfe3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

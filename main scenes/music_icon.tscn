@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://brbcwp6gacncg"]
+
+[ext_resource type="Texture2D" uid="uid://ddxk84wcyrst2" path="res://assets/5.0 assets/musicfinal.png" id="1_q4ou2"]
+
+[node name="Button" type="Button"]
+offset_left = -24.0
+offset_top = -21.0
+offset_right = 13.0
+offset_bottom = 13.0
+
+[node name="Musicfinal" type="Sprite2D" parent="."]
+position = Vector2(16, 16.5)
+scale = Vector2(0.21, 0.185)
+texture = ExtResource("1_q4ou2")

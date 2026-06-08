@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwdfk5fi6mcmb"]
+
+[ext_resource type="AudioStream" uid="uid://nstgi7dp5w6i" path="res://assets/3.0 assets/BGM_Strings.mp3" id="1_3ncwk"]
+[ext_resource type="Script" uid="uid://b41562dmvqn3m" path="res://scripts/main_bg_music.gd" id="2_3ncwk"]
+
+[node name="Main_BgMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_3ncwk")
+autoplay = true
+bus = &"Music"
+script = ExtResource("2_3ncwk")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

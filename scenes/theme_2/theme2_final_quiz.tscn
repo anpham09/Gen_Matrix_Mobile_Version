@@ -1,0 +1,120 @@
+[gd_scene load_steps=9 format=3 uid="uid://d4mhe5ix2dtyc"]
+
+[ext_resource type="Script" uid="uid://vlhcd43veorp" path="res://scripts/theme_2_final_quiz.gd" id="1_ybll6"]
+[ext_resource type="Texture2D" uid="uid://doslocgsyotfe" path="res://assets/sprites/customed sprites/try/2025_12_10_0gp_Kleki.png" id="2_0to52"]
+[ext_resource type="Texture2D" uid="uid://d2t0a6vni4c25" path="res://assets/3.0 assets/theme2_bg.png" id="2_ybll6"]
+[ext_resource type="FontFile" uid="uid://cm5ca758gdisr" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_s8asu"]
+[ext_resource type="FontFile" uid="uid://beqr3tqc5p7gf" path="res://assets/fonts/PixelOperator8.ttf" id="4_iiatf"]
+[ext_resource type="Texture2D" uid="uid://ckqiq5fcyiqlf" path="res://assets/7.0 assets/measure.png" id="6_7xflg"]
+[ext_resource type="Texture2D" uid="uid://dgk1r40ikdwmm" path="res://assets/8.0 assets/theme2_final_quiz_title.png" id="7_0t34v"]
+
+[sub_resource type="Theme" id="Theme_bnlaw"]
+ItemList/colors/font_color = Color(0.29987788, 0.84684056, 0, 1)
+
+[node name="FinalQuiz" type="Control"]
+z_index = 4096
+layout_mode = 3
+anchor_top = -0.0050000004
+anchor_right = 0.712
+anchor_bottom = 0.74500006
+offset_top = 0.24000025
+offset_right = -0.22399902
+offset_bottom = 0.23995972
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ybll6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.21400002
+anchor_top = 0.208
+anchor_right = 0.21400002
+anchor_bottom = 0.208
+offset_left = -268.48
+offset_top = -53.088005
+offset_right = 813.52
+offset_bottom = 426.912
+color = Color(0.33698553, 8.81274e-05, 0.34352344, 1)
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -519.0
+offset_top = -265.0
+offset_right = 1529.0
+offset_bottom = 1374.0
+texture = ExtResource("2_ybll6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -523.0
+offset_top = -163.0
+offset_right = 1525.0
+offset_bottom = 1373.0
+texture = ExtResource("2_0to52")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 52.0
+offset_top = 17.0
+offset_right = 655.0
+offset_bottom = 49.0
+theme_override_fonts/font = ExtResource("3_s8asu")
+theme_override_font_sizes/font_size = 32
+text = "----Final Quiz----"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.093
+anchor_bottom = -0.093
+offset_left = 52.0
+offset_top = 72.198
+offset_right = 655.0
+offset_bottom = 294.198
+alignment = 1
+
+[node name="DisplayText" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_s8asu")
+theme_override_font_sizes/font_size = 24
+text = "Testing"
+vertical_alignment = 3
+autowrap_mode = 3
+
+[node name="ItemList" type="ItemList" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_bnlaw")
+theme_override_fonts/font = ExtResource("4_iiatf")
+theme_override_font_sizes/font_size = 8
+max_text_lines = 2
+auto_width = true
+auto_height = true
+item_count = 3
+item_0/text = "Item 0"
+item_1/text = "Item 1"
+item_2/text = "Item 2"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+z_index = 4096
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_s8asu")
+theme_override_font_sizes/font_size = 24
+text = "End Game"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(307.5, 125.5)
+scale = Vector2(0.46466663, 0.14210525)
+texture = ExtResource("6_7xflg")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(350.00003, 42)
+scale = Vector2(0.19322918, 0.11056135)
+texture = ExtResource("7_0t34v")
+
+[connection signal="item_selected" from="VBoxContainer/ItemList" to="." method="_on_item_list_item_selected"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

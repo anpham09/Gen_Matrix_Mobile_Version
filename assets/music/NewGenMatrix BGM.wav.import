@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bl6d4sfycrkol"
+path="res://.godot/imported/NewGenMatrix BGM.wav-f0cbaec1e409e5e6bddfe2fedc5681f7.sample"
+
+[deps]
+
+source_file="res://assets/music/NewGenMatrix BGM.wav"
+dest_files=["res://.godot/imported/NewGenMatrix BGM.wav-f0cbaec1e409e5e6bddfe2fedc5681f7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=4
+compress/mode=2

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dophvp0o7qk6j"]
+
+[ext_resource type="Texture2D" uid="uid://bds7oew8vbqhx" path="res://assets/2.0 assets/nature-paltformer-tileset-16x16.png" id="1_bjqlw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8lbij"]
+size = Vector2(44, 7)
+
+[node name="Elevator" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(6, 3.5000005)
+scale = Vector2(2.9333334, 0.5384616)
+texture = ExtResource("1_bjqlw")
+region_enabled = true
+region_rect = Rect2(0.55638885, 112.71814, 15.104355, 13.857208)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, 3.5)
+shape = SubResource("RectangleShape2D_8lbij")
+one_way_collision = true

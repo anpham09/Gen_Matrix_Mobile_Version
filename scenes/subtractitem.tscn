@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://pg3vdcfm3s8"]
+
+[ext_resource type="Texture2D" uid="uid://dcchcfvk3ompc" path="res://assets/sprites/customed sprites/reward&enemy/Reward.png" id="1_mmegr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mmegr"]
+radius = 160.6549
+
+[node name="subtractitem" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mmegr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mmegr")

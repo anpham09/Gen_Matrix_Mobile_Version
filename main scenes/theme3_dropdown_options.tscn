@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://ban4ymsxshyc0"]
+
+[ext_resource type="Script" uid="uid://kybnnmxtthjw" path="res://scripts/theme_3_dropdown_options.gd" id="1_t6jui"]
+[ext_resource type="Texture2D" uid="uid://cummhmyygy1vu" path="res://assets/5.0 assets/final_home.png" id="2_dh3ax"]
+[ext_resource type="Texture2D" uid="uid://cphjooi68pp2s" path="res://assets/5.0 assets/final_restart.png" id="3_re2ie"]
+[ext_resource type="Texture2D" uid="uid://fuikgudld81b" path="res://assets/4.0 assets/settings.png" id="5_kyy5q"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_t6jui"]
+
+[sub_resource type="Theme" id="Theme_t6jui"]
+OptionButton/constants/arrow_margin = 0
+OptionButton/constants/h_separation = 0
+OptionButton/icons/arrow = SubResource("CanvasTexture_t6jui")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t6jui"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="DropdownOptions" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_t6jui")
+
+[node name="OptionButton2" type="OptionButton" parent="."]
+offset_right = 48.0
+offset_bottom = 36.0
+theme = SubResource("Theme_t6jui")
+theme_override_styles/normal = SubResource("StyleBoxFlat_t6jui")
+fit_to_longest_item = false
+allow_reselect = true
+item_count = 2
+popup/item_0/icon = ExtResource("2_dh3ax")
+popup/item_0/id = 0
+popup/item_1/icon = ExtResource("3_re2ie")
+popup/item_1/id = 1
+
+[node name="SettingsIcon" type="Sprite2D" parent="."]
+position = Vector2(22.999998, 18.882633)
+scale = Vector2(0.09765626, 0.07467722)
+texture = ExtResource("5_kyy5q")
+
+[connection signal="item_selected" from="OptionButton2" to="." method="_on_option_button_2_item_selected"]

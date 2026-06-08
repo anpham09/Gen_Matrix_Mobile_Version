@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://w1sqma2pv0dn"]
+
+[ext_resource type="VideoStream" uid="uid://b1dgmukhpv8u6" path="res://assets/music/Add-a-heading.ogv" id="1_scjsm"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer"]
+offset_right = 1164.0
+offset_bottom = 740.0
+stream = ExtResource("1_scjsm")

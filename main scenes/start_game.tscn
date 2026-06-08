@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5teqtnt5ux0j"]
+
+[ext_resource type="Script" uid="uid://cvmwlltacs02i" path="res://scripts/start_game.gd" id="1_0eylb"]
+[ext_resource type="Texture2D" uid="uid://dhmgu85ukhjvt" path="res://assets/5.0 assets/Homescreen 2.0.png" id="2_0eylb"]
+[ext_resource type="PackedScene" uid="uid://cwdfk5fi6mcmb" path="res://main scenes/main_bg_music.tscn" id="2_hx770"]
+[ext_resource type="AudioStream" uid="uid://bvpnxq0bdk5o5" path="res://assets/music/Descension.mp3" id="3_2drn5"]
+[ext_resource type="PackedScene" uid="uid://d14rll3cd0jks" path="res://main scenes/privacy_term.tscn" id="5_01to8"]
+[ext_resource type="Texture2D" uid="uid://ckqiq5fcyiqlf" path="res://assets/7.0 assets/measure.png" id="6_8txyx"]
+
+[node name="StartGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0eylb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1145.0001, 614.99994)
+scale = Vector2(2.0400002, 1.9136844)
+texture = ExtResource("6_8txyx")
+
+[node name="Main_BgMusic" parent="." instance=ExtResource("2_hx770")]
+position = Vector2(0, 2)
+stream = ExtResource("3_2drn5")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = -14.0
+offset_right = 2676.0
+offset_bottom = 1522.0
+texture = ExtResource("2_0eylb")
+
+[node name="StartGame" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+offset_left = 44.0
+offset_top = 457.0
+offset_right = 1009.0
+offset_bottom = 754.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 56
+text = "START GAME"
+expand_icon = true
+
+[node name="Settings" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+offset_left = 53.0
+offset_top = 790.0
+offset_right = 997.0
+offset_bottom = 1080.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 56
+text = "START GAME"
+expand_icon = true
+
+[node name="CreditButton" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 40.0
+offset_top = 1114.0
+offset_right = 1004.0
+offset_bottom = 1420.0
+mouse_default_cursor_shape = 2
+
+[node name="PrivacyTerm" parent="." instance=ExtResource("5_01to8")]
+layout_mode = 1
+offset_left = 5.0
+offset_top = -254.0
+offset_right = 5.0
+offset_bottom = -254.0
+
+[connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="CreditButton" to="." method="_on_credit_button_pressed"]

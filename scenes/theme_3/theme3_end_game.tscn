@@ -1,0 +1,83 @@
+[gd_scene load_steps=4 format=3 uid="uid://dulfnpni5ccju"]
+
+[ext_resource type="Script" uid="uid://b66rfkoiti5u4" path="res://scripts/theme_3_end_game.gd" id="1_yh6g4"]
+[ext_resource type="Texture2D" uid="uid://c05r733a3fo0j" path="res://assets/8.0 assets/end_game3.png" id="2_xv6wc"]
+[ext_resource type="Texture2D" uid="uid://ckqiq5fcyiqlf" path="res://assets/7.0 assets/measure.png" id="3_xv6wc"]
+
+[node name="EndGame" type="Control"]
+z_index = 4096
+layout_mode = 3
+anchor_right = 0.712
+anchor_bottom = 0.75000006
+offset_right = -0.22399902
+offset_bottom = -3.0517578e-05
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yh6g4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -169.0
+offset_top = -96.0
+offset_right = 546.0
+offset_bottom = 313.0
+texture = ExtResource("2_xv6wc")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.21400002
+anchor_top = 0.208
+anchor_right = 0.21400002
+anchor_bottom = 0.208
+offset_left = -267.48
+offset_top = -158.08801
+offset_right = 624.52
+offset_bottom = 321.912
+
+[node name="Restart" type="Button" parent="."]
+show_behind_parent = true
+layout_direction = 1
+layout_mode = 1
+anchors_preset = -1
+offset_left = 35.0
+offset_top = 168.0
+offset_right = 345.0
+offset_bottom = 280.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 40
+text = "RESTART GAME"
+
+[node name="TakeQuiz" type="Button" parent="."]
+show_behind_parent = true
+layout_direction = 1
+layout_mode = 1
+anchors_preset = -1
+offset_left = 35.0
+offset_top = 45.0
+offset_right = 341.0
+offset_bottom = 152.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 40
+text = "TAKE QUIZ!"
+
+[node name="Home" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -169.0
+offset_top = 225.0
+offset_right = -85.0
+offset_bottom = 315.0
+mouse_default_cursor_shape = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(134.50002, 67.999985)
+scale = Vector2(0.5513333, 0.5136842)
+texture = ExtResource("3_xv6wc")
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="TakeQuiz" to="." method="_on_take_quiz_pressed"]
+[connection signal="pressed" from="Home" to="." method="_on_home_pressed"]

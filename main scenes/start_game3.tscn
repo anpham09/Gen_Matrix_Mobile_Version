@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://dxfny7c7gh51l"]
+
+[ext_resource type="Script" uid="uid://yog8f2oaety4" path="res://scripts/start_game_3.gd" id="1_devb5"]
+[ext_resource type="Texture2D" uid="uid://ckqiq5fcyiqlf" path="res://assets/7.0 assets/measure.png" id="2_gplg0"]
+[ext_resource type="Texture2D" uid="uid://dhmgu85ukhjvt" path="res://assets/5.0 assets/Homescreen 2.0.png" id="2_jsgpj"]
+[ext_resource type="PackedScene" uid="uid://cwdfk5fi6mcmb" path="res://main scenes/main_bg_music.tscn" id="2_sux8f"]
+[ext_resource type="AudioStream" uid="uid://bvpnxq0bdk5o5" path="res://assets/music/Descension.mp3" id="3_sux8f"]
+
+[node name="StartGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_devb5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1145.0001, 614.99994)
+scale = Vector2(2.0400002, 1.9136844)
+texture = ExtResource("2_gplg0")
+
+[node name="Main_BgMusic" parent="." instance=ExtResource("2_sux8f")]
+stream = ExtResource("3_sux8f")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = -17.0
+offset_right = 2676.0
+offset_bottom = 1524.0
+texture = ExtResource("2_jsgpj")
+
+[node name="StartGame" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+offset_left = 31.0
+offset_top = 453.0
+offset_right = 1010.0
+offset_bottom = 747.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 56
+text = "START GAME"
+expand_icon = true
+
+[node name="Settings" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+offset_left = 25.0
+offset_top = 782.0
+offset_right = 1013.0
+offset_bottom = 1082.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 56
+text = "START GAME"
+expand_icon = true
+
+[node name="CreditButton" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 29.0
+offset_top = 1114.0
+offset_right = 1011.0
+offset_bottom = 1418.0
+mouse_default_cursor_shape = 2
+
+[connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="CreditButton" to="." method="_on_credit_button_pressed"]

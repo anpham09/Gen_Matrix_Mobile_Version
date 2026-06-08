@@ -1,0 +1,63 @@
+extends Control
+
+
+@onready var control: Control = $"."
+
+@onready var label: Label = $Label
+
+@onready var result: Label = $result
+
+@onready var item_list: ItemList = $ItemList
+
+@onready var ok_button: Button = $OkButton
+
+
+
+@onready var timer: Timer = $Timer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	ok_button.hide()
+	item_list.add_item("A) Check for spelling mistakes in their email, and never click on an attached link or search on the browser by yourself.", null, true)
+	item_list.add_item("B) Click on the provided link to see what happens! My account should not be expired T^T", null, true)
+	item_list.add_item("C) Reply to the email and ask what’s going on.", null, true)
+	item_list.add_item("D) Enter your username, password, and personal information to login to the account.", null, true)
+	
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
+
+
+func _on_item_list_item_selected(index: int) -> void:
+	
+	item_list.hide()
+	label.hide()
+	var resultt
+	if index == 0:
+		resultt = "Congratulations! You guessed it correctly!"
+		animation_player.play("right_answer")
+		#player.add_point()
+		
+		ok_button.text = "OK!"
+		ok_button.show()
+	else:
+		resultt = "Oh no! You guessed it incorrectly!"
+		animation_player.play("wrong_answer")
+		
+		timer.start()
+		#get_tree().reload_current_scene()
+	result.text = str(resultt)
+
+		
+	
+	
+	#timer.start()
+
+
+
+func _on_timer_timeout() -> void:
+	get_tree().reload_current_scene()
+	#control.queue_free()
+
+func _on_ok_button_pressed() -> void:
+	control.queue_free()

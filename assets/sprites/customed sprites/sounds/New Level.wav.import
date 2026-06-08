@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bwppk80ooorsu"
+path="res://.godot/imported/New Level.wav-7eca1d350e345ab79b63f46f49e79df1.sample"
+
+[deps]
+
+source_file="res://assets/sprites/customed sprites/sounds/New Level.wav"
+dest_files=["res://.godot/imported/New Level.wav-7eca1d350e345ab79b63f46f49e79df1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

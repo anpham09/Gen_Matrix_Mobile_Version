@@ -1,0 +1,84 @@
+[gd_scene load_steps=7 format=3 uid="uid://cfx8vvyac2t2p"]
+
+[ext_resource type="Script" uid="uid://dx67i1dksofxa" path="res://scripts/select_theme_first.gd" id="1_kern2"]
+[ext_resource type="PackedScene" uid="uid://cwdfk5fi6mcmb" path="res://main scenes/main_bg_music.tscn" id="2_inwy1"]
+[ext_resource type="Texture2D" uid="uid://ckqiq5fcyiqlf" path="res://assets/7.0 assets/measure.png" id="2_kern2"]
+[ext_resource type="Texture2D" uid="uid://bftrkmltdwfqg" path="res://assets/6.0 assets/final_themeselect1.png" id="2_p78od"]
+[ext_resource type="Texture2D" uid="uid://barpgjxno7vsd" path="res://assets/2.0 assets/back_button.png" id="3_p78od"]
+[ext_resource type="AudioStream" uid="uid://bvpnxq0bdk5o5" path="res://assets/music/Descension.mp3" id="3_s1jsn"]
+
+[node name="SelectTheme" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kern2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1145.0001, 614.99994)
+scale = Vector2(2.0400002, 1.9136844)
+texture = ExtResource("2_kern2")
+
+[node name="Main_BgMusic" parent="." instance=ExtResource("2_inwy1")]
+visible = false
+stream = ExtResource("3_s1jsn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = -16.0
+offset_right = 2679.0
+offset_bottom = 1525.0
+texture = ExtResource("2_p78od")
+
+[node name="EnterTheme" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 253.0
+offset_top = 1164.0
+offset_right = 872.0
+offset_bottom = 1390.0
+mouse_default_cursor_shape = 2
+expand_icon = true
+
+[node name="EnterTheme2" type="Button" parent="."]
+visible = false
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+offset_left = 1023.0
+offset_top = 79.0
+offset_right = 1943.9999
+offset_bottom = 1735.0
+mouse_default_cursor_shape = 2
+
+[node name="EnterTheme3" type="Button" parent="."]
+visible = false
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+offset_left = 2012.0
+offset_top = 81.0
+offset_right = 2933.0
+offset_bottom = 1737.0
+mouse_default_cursor_shape = 2
+
+[node name="Back Button" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(182, 1740.0001)
+scale = Vector2(0.16571248, 0.14514223)
+texture = ExtResource("3_p78od")
+
+[node name="Back Button2" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_top = 1333.0
+offset_right = 201.0
+offset_bottom = 1522.0
+mouse_default_cursor_shape = 2
+
+[connection signal="pressed" from="EnterTheme" to="." method="_on_enter_theme_pressed"]
+[connection signal="pressed" from="EnterTheme2" to="." method="_on_enter_theme_2_pressed"]
+[connection signal="pressed" from="EnterTheme3" to="." method="_on_enter_theme_3_pressed"]
+[connection signal="pressed" from="Back Button2" to="." method="_on_button_pressed"]

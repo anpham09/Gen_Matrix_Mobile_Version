@@ -1,0 +1,149 @@
+[gd_scene load_steps=10 format=3 uid="uid://2qiv1ll5afxq"]
+
+[ext_resource type="Script" uid="uid://bjclj3lngt1v5" path="res://scripts/mini_audio_adjust.gd" id="1_56rxc"]
+[ext_resource type="Texture2D" uid="uid://lx1vqq0yr80l" path="res://assets/4.0 assets/audio adjustment screen.png" id="2_vp41s"]
+[ext_resource type="Texture2D" uid="uid://yxojvb084rlx" path="res://assets/7.0 assets/mini_audio_adjust.png" id="3_knsg8"]
+[ext_resource type="FontFile" uid="uid://cm5ca758gdisr" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="4_4jug3"]
+[ext_resource type="PackedScene" uid="uid://dn52pjjyj4sh1" path="res://main scenes/mini_audio_slider.tscn" id="5_666rv"]
+[ext_resource type="PackedScene" uid="uid://dojxyynrtk13" path="res://main scenes/audio_slider.tscn" id="6_4vivk"]
+[ext_resource type="Script" uid="uid://c2v78wncvk4tp" path="res://scripts/full_screen_button.gd" id="7_4t74i"]
+[ext_resource type="Texture2D" uid="uid://bax6orj4bytcr" path="res://assets/7.0 assets/Screenshot 2026-02-28 at 1.40.45 PM.png" id="8_v25s7"]
+[ext_resource type="Texture2D" uid="uid://ckqiq5fcyiqlf" path="res://assets/7.0 assets/measure.png" id="9_vp41s"]
+
+[node name="AudioAdjust" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 3436.0
+offset_bottom = 2432.0
+script = ExtResource("1_56rxc")
+
+[node name="SettingBg" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1504, 932.875)
+scale = Vector2(2.2625, 2.124722)
+texture = ExtResource("2_vp41s")
+
+[node name="SettingBg2" type="Sprite2D" parent="."]
+position = Vector2(1380.5663, 968.25)
+scale = Vector2(0.6477807, 0.60833335)
+texture = ExtResource("3_knsg8")
+
+[node name="Music Label2" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1123.0
+offset_top = 363.0
+offset_right = 3343.0
+offset_bottom = 523.0
+theme_override_fonts/font = ExtResource("4_4jug3")
+theme_override_font_sizes/font_size = 160
+text = "Audio"
+uppercase = true
+
+[node name="Music2" parent="." instance=ExtResource("5_666rv")]
+layout_mode = 0
+offset_left = 1026.0
+offset_top = 1078.0
+offset_right = 1683.0
+offset_bottom = 1154.0
+bus_name = "Music"
+
+[node name="SFX2" parent="." instance=ExtResource("5_666rv")]
+layout_mode = 0
+offset_left = 1029.0
+offset_top = 923.0
+offset_right = 1686.0
+offset_bottom = 999.0
+bus_name = "SFX"
+
+[node name="Music" parent="." instance=ExtResource("6_4vivk")]
+visible = false
+layout_mode = 0
+offset_left = 417.0
+offset_top = 872.0
+offset_right = 2416.0
+offset_bottom = 1160.0
+max_value = 100.0
+step = 1.0
+value = 50.0
+tick_count = 10
+bus_name = "Music"
+
+[node name="SFX" parent="." instance=ExtResource("6_4vivk")]
+visible = false
+layout_mode = 0
+offset_left = 404.0
+offset_top = 1399.0
+offset_right = 2426.0
+offset_bottom = 1687.0
+max_value = 100.0
+step = 1.0
+value = 50.0
+tick_count = 10
+bus_name = "SFX"
+
+[node name="FullScreenButton" type="CheckButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 350.0
+offset_top = 1681.0
+offset_right = 2570.0
+offset_bottom = 1809.0
+theme_override_fonts/font = ExtResource("4_4jug3")
+theme_override_font_sizes/font_size = 120
+button_pressed = true
+text = "Fullscreen"
+icon_alignment = 1
+script = ExtResource("7_4t74i")
+
+[node name="StartGameBg" type="Sprite2D" parent="."]
+position = Vector2(1666.0001, 777.99994)
+scale = Vector2(1.9811108, 2.0266666)
+texture = ExtResource("8_v25s7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = 3395.0
+offset_top = 1673.0
+offset_right = 5615.0
+offset_bottom = 2471.0
+theme_override_constants/separation = 150
+
+[node name="Music Label" type="Label" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_4jug3")
+theme_override_font_sizes/font_size = 120
+text = "Music Volume"
+
+[node name="SFX Label" type="Label" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_4jug3")
+theme_override_font_sizes/font_size = 120
+text = "Sound Effects Volume"
+
+[node name="Back Button" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2411.9995, 430.00024)
+scale = Vector2(0.16571248, 0.14514223)
+
+[node name="Back Button2" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 1614.0
+offset_top = 696.0
+offset_right = 1753.0
+offset_bottom = 853.0
+mouse_default_cursor_shape = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1145.0001, 614.99994)
+scale = Vector2(2.0400002, 1.9136844)
+texture = ExtResource("9_vp41s")
+
+[connection signal="toggled" from="FullScreenButton" to="FullScreenButton" method="_on_toggled"]
+[connection signal="pressed" from="Back Button2" to="." method="_on_back_button_2_pressed"]

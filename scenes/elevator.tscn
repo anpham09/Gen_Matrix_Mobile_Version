@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbmaf7vfq0i8u"]
+
+[ext_resource type="Texture2D" uid="uid://4krawr2etjv4" path="res://assets/sprites/sci-fi-tileset.png" id="1_8o2wm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8lbij"]
+size = Vector2(25, 10)
+
+[node name="Elevator" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.25, 0)
+scale = Vector2(1.1190476, 1)
+texture = ExtResource("1_8o2wm")
+region_enabled = true
+region_rect = Rect2(93.379, 51.033363, 21.666336, 9.848335)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_8lbij")
+one_way_collision = true

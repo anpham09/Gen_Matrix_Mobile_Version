@@ -1,0 +1,223 @@
+[gd_scene load_steps=5 format=3 uid="uid://d14rll3cd0jks"]
+
+[ext_resource type="Texture2D" uid="uid://yxojvb084rlx" path="res://assets/7.0 assets/mini_audio_adjust.png" id="1_03gp0"]
+[ext_resource type="Script" uid="uid://b5eiw7hu7m45j" path="res://scripts/privacy_term.gd" id="1_dyu7i"]
+[ext_resource type="FontFile" uid="uid://beqr3tqc5p7gf" path="res://assets/fonts/PixelOperator8.ttf" id="2_wbsa7"]
+[ext_resource type="FontFile" uid="uid://cm5ca758gdisr" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_dyu7i"]
+
+[node name="PrivacyTerm" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dyu7i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1394.5001, 991.99994)
+scale = Vector2(6.6900725, 3.830918)
+texture = ExtResource("1_03gp0")
+region_enabled = true
+region_rect = Rect2(1086.1836, 485.47235, 413.8164, 414.52765)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 370.0
+offset_right = 2617.0
+offset_bottom = 1538.0
+focus_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_wbsa7")
+theme_override_fonts/bold_font = ExtResource("3_dyu7i")
+theme_override_fonts/bold_italics_font = ExtResource("3_dyu7i")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 24
+bbcode_enabled = true
+text = "
+[center][font_size=40][b]PRIVACY POLICY[/b][/font_size][/center]
+[center][b]Last Updated: March 8, 2026[/b][/center]
+
+Thank you for playing [b]GenMatrix[/b], developed by [b]Minh Thien An Pham[/b] and [b]Vanessa Han[/b] (“we,” “our,” or “us”). Because we respect the privacy of our players and are committed to protecting it, this Privacy Policy explains how information is handled when players use our game.
+
+Our game is intended for a general audience and may be played by children, including those under the age of 13. As such, we designed GenMatrix to minimize data collection and protect player privacy.
+
+[center]______________________________________________________________________________________________________________________________[/center]
+
+[font_size=28][b]Data Collection[/b][/font_size]
+
+[b]We do not collect, store, or process personal information from players,[/b] either directly or automatically. This means we do not collect information including but not limited to:
+
+• First and last names
+• Homes or other physical addresses
+• Contact information
+• A screen or user name that functions as online contact information
+• Geolocation information sufficient to identify street name and name of a city or town
+• Device identifiers linked to individuals
+
+Because we do not automatically collect any personal information from players, children can play the game without sharing personal data.
+
+[center]______________________________________________________________________________________________________________________________[/center]
+
+[font_size=28][b]Children’s Privacy[/b][/font_size]
+
+Our game complies with the Children’s Online Privacy Protection Act (COPPA), which protects the privacy of children under the age of 13.
+Because GenMatrix does not collect personal information from players, children can play the game without submitting personal data.
+[b]We do not knowingly collect personal information from players, including children under the age of 13.[/b]
+
+[center]______________________________________________________________________________________________________________________________[/center]
+
+[font_size=28][b]Third Party Services[/b][/font_size]
+
+[b]GenMatrix does not use third party services that collect player data.[/b]
+However, the platform from which the game is downloaded, [url=https://itch.io]itch.io[/url], may collect information according to their own privacy policies. We do not control or manage those practices.
+
+[center]______________________________________________________________________________________________________________________________[/center]
+
+[font_size=28][b]Data Security[/b][/font_size]
+
+Because we do not collect or store personal information from players, [b]we do not maintain databases of player personal data.[/b]
+
+[center]______________________________________________________________________________________________________________________________[/center]
+
+[font_size=28][b]Changes to Privacy Policy[/b][/font_size]
+
+We may update this Privacy Policy if the game changes or if new features are added. If changes are made, the updated policy will include a new [b]“Last Updated”[/b] date.
+
+If future versions of GenMatrix introduce features that collect or process player data, this Privacy Policy will be updated to explain those changes.
+
+[center]______________________________________________________________________________________________________________________________[/center]
+
+[font_size=28][b]Contact[/b][/font_size]
+
+If you have questions or concerns about this Privacy Policy, please contact us at:
+
+[b]Minh Thien An Pham:[/b] [url=mailto:anpham.0992@gmail.com]anpham.0992@gmail.com[/url]
+
+[b]Vanessa Han:[/b] [url=mailto:vhan4791@gmail.com]vhan4791@gmail.com[/url]
+
+
+[center][font_size=40][b]TERMS OF USE[/b][/font_size][/center]
+[center][b]Last Updated: March 8, 2026[/b][/center]
+
+Thank you for playing [b]GenMatrix[/b], developed by [b]Minh Thien An Pham[/b] and [b]Vanessa Han[/b] (“we,” “our,” or “us”). By accessing or using this game, you agree to be bound by this agreement and the terms of our Privacy Policy. This agreement shall remain in full force and effect while you use any service created and maintained by us.
+
+[center]______________________________________________________________________________________________________________________________[/center]
+
+[font_size=28][b]Use of Our Game[/b][/font_size]
+
+[b]GenMatrix is provided for personal, non-commercial entertainment.[/b]
+
+You agree that you will not:
+
+    • Copy, reproduce, or distribute the game without permission  
+    • Modify, reverse engineer, or attempt to extract the game’s source code  
+    • Use the game for illegal or harmful activities  
+    • Attempt to interfere with or disrupt the game’s functionality  
+
+[center]______________________________________________________________________________________________________________________________[/center]
+
+[font_size=28][b]Intellectual Property[/b][/font_size]
+
+All content in GenMatrix, including but not limited to:
+    • Game design  
+    • Artwork  
+    • Music  
+    • Code  
+    • Characters  
+    • Story elements  
+is owned by [b]Minh Thien An Pham[/b] and [b]Vanessa Han[/b], unless otherwise stated.
+
+These materials are protected by applicable intellectual property and copyright laws.
+You may not copy, redistribute, or create derivative works from the game without permission.
+
+[center]______________________________________________________________________________________________________________________________[/center]
+
+[font_size=28][b]Availability[/b][/font_size]
+
+We may update, modify, or discontinue GenMatrix at any time without notice.
+We do not guarantee that the game will always be available or free from technical issues.
+
+[center]______________________________________________________________________________________________________________________________[/center]
+
+[font_size=28][b]No Warranty[/b][/font_size]
+
+GenMatrix is provided “as is” without warranties of any kind.
+We do not guarantee that the game will always function without errors, interruptions, or bugs.
+
+[center]______________________________________________________________________________________________________________________________[/center]
+
+[font_size=28][b]Limitation of Liability[/b][/font_size]
+
+To the fullest extent permitted by law, [b]Minh Thien An Pham[/b] and [b]Vanessa Han[/b] are not responsible for any damages that may result from the use, misuse, or inability to use GenMatrix.
+
+[center]______________________________________________________________________________________________________________________________[/center]
+
+[font_size=28][b]Third Party Platforms[/b][/font_size]
+
+GenMatrix may be distributed through the third-party platform [url=https://itch.io]itch.io[/url]. This platform operates under their own terms and policies that apply to users.
+
+We are not responsible for the policies or practices of third-party platforms.
+
+[center]______________________________________________________________________________________________________________________________[/center]
+
+[font_size=28][b]Changes to Terms of Use[/b][/font_size]
+
+We may update these Terms of Use over time. If changes are made, the updated terms will include a new [b]“Last Updated”[/b] date.
+Continued use of the game after changes indicates acceptance of the updated terms.
+
+[center]______________________________________________________________________________________________________________________________[/center]
+
+[font_size=28][b]Contact[/b][/font_size]
+
+If you have questions or concerns about these Terms of Use, please contact us at:
+
+[b]Minh Thien An Pham:[/b] [url=mailto:anpham.0992@gmail.com]anpham.0992@gmail.com[/url]
+
+[b]Vanessa Han:[/b] [url=mailto:vhan4791@gmail.com]vhan4791@gmail.com[/url]"
+tab_size = 1
+selection_enabled = true
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 156.0
+offset_top = 109.0
+offset_right = 1317.0
+offset_bottom = 225.0
+theme_override_font_sizes/font_size = 80
+text = "Terms of Use & Privacy Policy"
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 550.0
+offset_top = 774.0
+offset_right = 912.0
+offset_bottom = 884.0
+theme_override_font_sizes/font_size = 80
+text = "I accept"
+
+[node name="Label3" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1371.0
+offset_top = 37.0
+offset_right = 1449.0
+offset_bottom = 202.0
+theme_override_font_sizes/font_size = 120
+text = "X"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 977.0
+offset_top = 1604.0
+offset_right = 1722.0
+offset_bottom = 1744.0
+theme_override_fonts/font = ExtResource("3_dyu7i")
+theme_override_font_sizes/font_size = 56
+text = "I accept"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://17qju0xdgc88"]
+
+[ext_resource type="AudioStream" uid="uid://cp2jm810e6drj" path="res://assets/music/BGM_Harp.mp3" id="1_5p2ao"]
+[ext_resource type="Script" uid="uid://yy388it2hxn5" path="res://scripts/theme_2_bg_music.gd" id="2_5p2ao"]
+
+[node name="Theme2_BgMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_5p2ao")
+bus = &"Music"
+script = ExtResource("2_5p2ao")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

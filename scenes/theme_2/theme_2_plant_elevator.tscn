@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://u6t7a0sivsmo"]
+
+[ext_resource type="Texture2D" uid="uid://bqnd0d7jews7s" path="res://assets/2.0 assets/plant_elevator.PNG" id="1_bni2b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8lbij"]
+size = Vector2(58.5, 15)
+
+[node name="Elevator" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-10.8747015, -3)
+scale = Vector2(0.1005395, 0.26355162)
+texture = ExtResource("1_bni2b")
+region_rect = Rect2(125.04657, -2.5508575, 555.0161, 832.5241)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-12.999999, 203.00002)
+scale = Vector2(0.1005395, 0.26355162)
+texture = ExtResource("1_bni2b")
+region_enabled = true
+region_rect = Rect2(125.04657, 81.1199, 555.0161, 748.8534)
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(-13.999999, 397)
+scale = Vector2(0.1005395, 0.26355162)
+texture = ExtResource("1_bni2b")
+region_enabled = true
+region_rect = Rect2(125.04657, 81.1199, 555.0161, 748.8534)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-11.25, -105)
+shape = SubResource("RectangleShape2D_8lbij")
+one_way_collision = true
