@@ -65,6 +65,6 @@ func _on_timer_timeout() -> void:
 
 
 func _on_ok_button_pressed() -> void:
-	var dialog = dialog_scene15.instantiate()
-	add_sibling(dialog)
+	#var dialog = dialog_scene15.instantiate()
+	#add_sibling(dialog)
 	control.queue_free()
