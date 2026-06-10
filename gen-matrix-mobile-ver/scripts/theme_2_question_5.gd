@@ -13,18 +13,22 @@ extends Control
 
 @onready var label_2: Label = $Label2
 
+@onready var joystick_control: Control = $Player/Control
+
 
 
 @onready var timer: Timer = $Timer
+
+@onready var dialog_scene15 = preload("res://main scenes/joystick_after_disappear.tscn")
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	ok_button.hide()
-	item_list.add_item("A. About 3%", null, true)
-	item_list.add_item("B. About 5%", null, true)
-	item_list.add_item("C. About 8.5%", null, true)
-	item_list.add_item("D. About 10%", null, true)
+	item_list.add_item("A. 10,000 homes", null, true)
+	item_list.add_item("B. 50,000 homes", null, true)
+	item_list.add_item("C. More than all the homes in Wyoming combined", null, true)
+	item_list.add_item("D. 100,000 homes", null, true)
 	
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -37,7 +41,7 @@ func _on_item_list_item_selected(index: int) -> void:
 	label.hide()
 	label_2.hide()
 	var resultt
-	if index == 0:
+	if index == 2:
 		resultt = "Congratulations! "
 		animation_player.play("right_answer")
 		#player.add_point()
@@ -50,7 +54,7 @@ func _on_item_list_item_selected(index: int) -> void:
 		
 		timer.start()
 		#get_tree().reload_current_scene()
-	result.text = str(resultt) + "About 3% of global emissions!"
+	result.text = str(resultt) + "It can power more than all the homes in Wyoming combined!"
 
 
 
@@ -61,5 +65,9 @@ func _on_timer_timeout() -> void:
 
 
 
+
+
 func _on_ok_button_pressed() -> void:
+	var dialog = dialog_scene15.instantiate()
+	add_sibling(dialog)
 	control.queue_free()

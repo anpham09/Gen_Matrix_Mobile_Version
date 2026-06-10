@@ -156,44 +156,55 @@ func unlock_level_4():
 		cloud_4.level_sound()
 		
 		
+@onready var joystick_control: Control = $Control
 	
 func show_dialog7():
+	joystick_control.queue_free()
 	var dialog = dialog_scene7.instantiate()
 	add_sibling(dialog)
 
 func show_dialog8():
+	joystick_control.queue_free()
 	var dialog = dialog_scene8.instantiate()
 	add_sibling(dialog)
 	
 func show_dialog9():
+	joystick_control.queue_free()
 	var dialog = dialog_scene9.instantiate()
 	add_sibling(dialog)
 	
 func show_dialog10():
+	joystick_control.queue_free()
 	var dialog = dialog_scene10.instantiate()
 	add_sibling(dialog)
 	
 func show_dialog11():
+	joystick_control.queue_free()
 	var dialog = dialog_scene11.instantiate()
 	add_sibling(dialog)
 	
 func show_dialog12():
+	joystick_control.queue_free()
 	var dialog = dialog_scene12.instantiate()
 	add_sibling(dialog)
 	
 func show_dialog13():
+	joystick_control.queue_free()
 	var dialog = dialog_scene13.instantiate()
 	add_sibling(dialog)
 	
 func show_dialog14():
+	joystick_control.queue_free()
 	var dialog = dialog_scene14.instantiate()
 	add_sibling(dialog)
 	
 func show_dialog15():
+	joystick_control.queue_free()
 	var dialog = dialog_scene15.instantiate()
 	add_sibling(dialog)
 	
 func show_dialog16():
+	joystick_control.queue_free()
 	var dialog = dialog_scene16.instantiate()
 	add_sibling(dialog)
 

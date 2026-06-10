@@ -11,20 +11,24 @@ extends Control
 
 @onready var ok_button: Button = $OkButton
 
-
 @onready var label_2: Label = $Label2
+
+@onready var joystick_control: Control = $Player/Control
+
 
 
 @onready var timer: Timer = $Timer
+
+@onready var dialog_scene15 = preload("res://main scenes/joystick_after_disappear.tscn")
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	ok_button.hide()
-	item_list.add_item("A. Up to 1 million gallons", null, true)
-	item_list.add_item("B. Up to 3 million gallons", null, true)
-	item_list.add_item("C. Up to 5 million gallons", null, true)
-	item_list.add_item("D. Up to 7 million gallons", null, true)
+	item_list.add_item("A. Over 700 tons of CO2", null, true)
+	item_list.add_item("B. 552 tons of CO2", null, true)
+	item_list.add_item("C. 419 tons of CO2", null, true)
+	item_list.add_item("D. 203 tons of CO2", null, true)
 	
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -37,7 +41,7 @@ func _on_item_list_item_selected(index: int) -> void:
 	label.hide()
 	label_2.hide()
 	var resultt
-	if index == 2:
+	if index == 1:
 		resultt = "Congratulations! "
 		animation_player.play("right_answer")
 		#player.add_point()
@@ -50,7 +54,7 @@ func _on_item_list_item_selected(index: int) -> void:
 		
 		timer.start()
 		#get_tree().reload_current_scene()
-	result.text = str(resultt) + "Up to 5 million gallons per day!"
+	result.text = str(resultt) + "It generated about 552 tons of CO2!"
 
 
 
@@ -61,5 +65,9 @@ func _on_timer_timeout() -> void:
 
 
 
+
+
 func _on_ok_button_pressed() -> void:
+	var dialog = dialog_scene15.instantiate()
+	add_sibling(dialog)
 	control.queue_free()
