@@ -11,6 +11,6 @@ extends Area2D
 
 
 func _on_body_entered(body: Node2D) -> void:
-	control.hide()
+	#control.hide()
 	player.show_dialog13()
 	animation_player.play("pickup")
