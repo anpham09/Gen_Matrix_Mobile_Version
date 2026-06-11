@@ -797,7 +797,6 @@ position = Vector2(-554, -604)
 [node name="Clouds" type="Node" parent="."]
 
 [node name="Cloud3" parent="Clouds" instance=ExtResource("25_ta5s5")]
-visible = false
 position = Vector2(-661, -592)
 
 [node name="Label3" type="Label" parent="Clouds/Cloud3"]

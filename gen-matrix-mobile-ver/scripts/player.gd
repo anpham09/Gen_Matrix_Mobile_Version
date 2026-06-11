@@ -15,6 +15,26 @@ const JUMP_VELOCITY = -255.0
 
 @onready var dialog_scene7 = preload("res://scenes/theme_2/theme_2_question1.tscn")
 
+#Joystick Functions
+@onready var replaced_joystick = preload("res://scenes/joystick_canvaslayer.tscn")
+
+var joystick_instance = null
+
+func spawn_joystick():
+	if joystick_instance == null:
+		joystick_instance = replaced_joystick.instantiate()
+		
+		add_child(joystick_instance)
+
+func remove_joystick():
+	if joystick_instance != null and is_instance_valid(joystick_instance):
+		joystick_instance.queue_free()
+		joystick_instance = null
+		print("got here")
+
+func _ready() -> void:
+	spawn_joystick()
+	
 func _process(delta: float) -> void:
 	if Input.get_action_strength("right"):
 		position.x += 100* delta
@@ -152,31 +172,52 @@ func unlock_level_4():
 		
 		
 func show_dialog():
+	remove_joystick()
+	
 	var dialog = dialog_scene.instantiate()
+	dialog.player = self
 	add_sibling(dialog)
 	
 func show_dialog2():
+	remove_joystick()
+	
 	var dialog = dialog_scene2.instantiate()
+	dialog.player = self
 	add_sibling(dialog)
 
 func show_dialog3():
+	remove_joystick()
+	
 	var dialog = dialog_scene3.instantiate()
+	dialog.player = self
 	add_sibling(dialog)
 
 func show_dialog4():
+	remove_joystick()
+	
 	var dialog = dialog_scene4.instantiate()
+	dialog.player = self
 	add_sibling(dialog)
 
 func show_dialog5():
+	remove_joystick()
+	
 	var dialog = dialog_scene5.instantiate()
+	dialog.player = self
 	add_sibling(dialog)
 	
 func show_dialog6():
+	remove_joystick()
+	
 	var dialog = dialog_scene6.instantiate()
+	dialog.player = self
 	add_sibling(dialog)
 	
 func show_dialog7():
+	remove_joystick()
+	
 	var dialog = dialog_scene7.instantiate()
+	dialog.player = self
 	add_sibling(dialog)
 
 

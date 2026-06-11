@@ -15,6 +15,7 @@ extends Control
 
 @onready var timer: Timer = $Timer
 
+var player
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -60,4 +61,6 @@ func _on_timer_timeout() -> void:
 	#control.queue_free()
 
 func _on_ok_button_pressed() -> void:
+	if player != null:
+		player.spawn_joystick()
 	control.queue_free()

@@ -29,8 +29,6 @@ const JUMP_VELOCITY = -255.0
 
 
 
-@onready var joystick_control: Control = $Control
-@onready var joystick_canvas_layer: CanvasLayer = $Control/CanvasLayer
 
 
 func _physics_process(delta: float) -> void:

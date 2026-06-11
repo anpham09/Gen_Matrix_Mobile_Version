@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://lwy1ihujenv7"]
+[gd_scene load_steps=60 format=3 uid="uid://lwy1ihujenv7"]
 
 [ext_resource type="PackedScene" uid="uid://dl7clt1wbhbur" path="res://main scenes/bg_music.tscn" id="1_bhx41"]
 [ext_resource type="Script" uid="uid://b2pjxaltelbks" path="res://scripts/game_manager.gd" id="1_iywne"]
@@ -27,7 +27,6 @@
 [ext_resource type="PackedScene" uid="uid://tl7x84uw7hnf" path="res://scenes/end_game.tscn" id="16_37s47"]
 [ext_resource type="PackedScene" uid="uid://biqq1ljm5lxk6" path="res://scenes/cloud3.tscn" id="16_ca42v"]
 [ext_resource type="Texture2D" uid="uid://ckqiq5fcyiqlf" path="res://assets/7.0 assets/measure.png" id="16_v2yb1"]
-[ext_resource type="PackedScene" uid="uid://dm4wkqyjina7l" path="res://scenes/joystick_canvaslayer.tscn" id="17_gxtfn"]
 [ext_resource type="PackedScene" uid="uid://db77srs1rcdn5" path="res://scenes/cloud4.tscn" id="17_rysoc"]
 [ext_resource type="Texture2D" uid="uid://c0rmccfc2pb1f" path="res://images/up_arrow-removebg-preview.png" id="18_gxtfn"]
 [ext_resource type="PackedScene" uid="uid://dx44rqenexk3s" path="res://scenes/final_quiz.tscn" id="25_pl11u"]
@@ -450,18 +449,6 @@ script = ExtResource("6_e1j6l")
 
 [node name="DropdownOptions" parent="Player" instance=ExtResource("28_sww3w")]
 position = Vector2(11, -23)
-
-[node name="Control" type="Control" parent="Player"]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = -12.0
-offset_top = -163.0
-offset_right = 133.0
-offset_bottom = 40.0
-
-[node name="CanvasLayer" parent="Player/Control" instance=ExtResource("17_gxtfn")]
-visible = false
 
 [node name="VideoStreamPlayer3" type="VideoStreamPlayer" parent="Player"]
 z_index = 4096
