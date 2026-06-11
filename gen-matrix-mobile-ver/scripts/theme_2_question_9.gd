@@ -19,7 +19,7 @@ extends Control
 @onready var timer: Timer = $Timer
 
 @onready var dialog_scene15 = preload("res://main scenes/joystick_after_disappear.tscn")
-
+var player
 
 
 # Called when the node enters the scene tree for the first time.
@@ -71,4 +71,8 @@ func _on_ok_button_pressed() -> void:
 	#joystick_control.show()
 	#var dialog = dialog_scene15.instantiate()
 	#add_sibling(dialog)
+	if player != null:
+		player.spawn_joystick()
+
+
 	control.queue_free()

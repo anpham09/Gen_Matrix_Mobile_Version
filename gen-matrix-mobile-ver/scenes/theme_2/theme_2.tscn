@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://c6pa0q72nvm62"]
+[gd_scene load_steps=74 format=3 uid="uid://c6pa0q72nvm62"]
 
 [ext_resource type="Texture2D" uid="uid://bds7oew8vbqhx" path="res://assets/2.0 assets/nature-paltformer-tileset-16x16.png" id="1_3lddn"]
 [ext_resource type="Texture2D" uid="uid://d2t0a6vni4c25" path="res://assets/3.0 assets/theme2_bg.png" id="1_ejvlo"]
@@ -24,7 +24,6 @@
 [ext_resource type="PackedScene" uid="uid://cbv58oa0vr6wd" path="res://scenes/theme_2/theme2_end_game.tscn" id="15_ta5s5"]
 [ext_resource type="PackedScene" uid="uid://d4mhe5ix2dtyc" path="res://scenes/theme_2/theme2_final_quiz.tscn" id="16_ejvlo"]
 [ext_resource type="PackedScene" uid="uid://m1g8333ty07d" path="res://scenes/theme_2/theme2_end_point.tscn" id="17_ejvlo"]
-[ext_resource type="PackedScene" uid="uid://dm4wkqyjina7l" path="res://scenes/joystick_canvaslayer.tscn" id="20_lpcmj"]
 [ext_resource type="Script" uid="uid://bq3rdoch88h0h" path="res://scripts/theme2_cloud.gd" id="21_f5bak"]
 [ext_resource type="PackedScene" uid="uid://bmolqpj6k2e8d" path="res://scenes/theme_2/theme_2_short_elevator.tscn" id="22_ejvlo"]
 [ext_resource type="PackedScene" uid="uid://dko6xv4j4sf5h" path="res://scenes/theme_2/theme2_cloud.tscn" id="24_kwi67"]
@@ -579,7 +578,7 @@ position = Vector2(-452, -1083)
 
 [node name="Player" parent="." instance=ExtResource("2_413bc")]
 unique_name_in_owner = true
-position = Vector2(58, 23)
+position = Vector2(54, 26)
 script = ExtResource("4_nqbjj")
 
 [node name="AudioAdjust" parent="Player" instance=ExtResource("8_ll54g")]
@@ -686,18 +685,6 @@ offset_left = -468.0
 offset_top = -209.00002
 offset_right = -468.0
 offset_bottom = -209.00002
-
-[node name="Control" type="Control" parent="Player"]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = -12.0
-offset_top = -163.0
-offset_right = 133.0
-offset_bottom = 40.0
-
-[node name="CanvasLayer" parent="Player/Control" instance=ExtResource("20_lpcmj")]
-visible = false
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_bcaty")

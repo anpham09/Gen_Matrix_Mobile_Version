@@ -27,6 +27,8 @@ const JUMP_VELOCITY = -255.0
 
 @onready var dialog_scene16 = preload("res://scenes/theme_2/theme_2_question10.tscn")
 
+
+
 @onready var joystick_control: Control = $Control
 @onready var joystick_canvas_layer: CanvasLayer = $Control/CanvasLayer
 
@@ -65,15 +67,26 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-@onready var replaced_joystick = preload("res://main scenes/joystick_after_disappear.tscn")
+#Joystick Functions
+@onready var replaced_joystick = preload("res://scenes/joystick_canvaslayer.tscn")
 
-	
-func _process(delta: float) -> void:
-	#joystick_control.show()
-	#joystick_canvas_layer.show()
-	#var dialog = replaced_joystick.instantiate()
-	#add_sibling(dialog)
-	pass
+var joystick_instance = null
+
+func spawn_joystick():
+	if joystick_instance == null:
+		joystick_instance = replaced_joystick.instantiate()
+		
+		add_child(joystick_instance)
+
+func remove_joystick():
+	if joystick_instance != null and is_instance_valid(joystick_instance):
+		joystick_instance.queue_free()
+		joystick_instance = null
+		print("got here")
+
+func _ready() -> void:
+	spawn_joystick()
+
 	
 
 var score = 0
@@ -175,129 +188,89 @@ func unlock_level_4():
 
 
 func show_dialog7():
-	#joystick_control.queue_free()
-	joystick_control.hide()
-	joystick_canvas_layer.hide()
-	#replaced_joystick.queue_free()
+	remove_joystick()
+	
 	var dialog = dialog_scene7.instantiate()
+	dialog.player = self
 	add_sibling(dialog)
 	
-	#add_sibling(replaced_joystick)
-	joystick_control.show()
-	joystick_canvas_layer.show()
+	#spawn_joystick()
 
 func show_dialog8():
-	#joystick_control.queue_free()
-	joystick_control.hide()
-	joystick_canvas_layer.hide()
-	#replaced_joystick.queue_free()
-	var dialog = dialog_scene8.instantiate()
-	add_sibling(dialog)
-	joystick_control.show()
-	joystick_canvas_layer.show()
+	remove_joystick()
 	
-	#add_sibling(replaced_joystick)
+	var dialog = dialog_scene8.instantiate()
+	dialog.player = self
+	add_sibling(dialog)
+	#spawn_joystick()
 
 	
 func show_dialog9():
-	#joystick_control.queue_free()
-	joystick_control.hide()
-	joystick_canvas_layer.hide()
-	#replaced_joystick.queue_free()
+	remove_joystick()
 
 	var dialog = dialog_scene9.instantiate()
+	dialog.player = self
 	add_sibling(dialog)
 	
-	joystick_control.show()
-	joystick_canvas_layer.show()
-	#add_sibling(replaced_joystick)
+	#spawn_joystick()
 
 	
 func show_dialog10():
-	#joystick_control.queue_free()
-	joystick_control.hide()
-	joystick_canvas_layer.hide()
-	#replaced_joystick.queue_free()
+	remove_joystick()
 	var dialog = dialog_scene10.instantiate()
+	dialog.player = self
 	add_sibling(dialog)
 	
-	joystick_control.show()
-	joystick_canvas_layer.show()
-	#add_sibling(replaced_joystick)
+	#spawn_joystick()
 	
 func show_dialog11():
-	#joystick_control.queue_free()
-	joystick_control.hide()
-	joystick_canvas_layer.hide()
-	#replaced_joystick.queue_free()
+	remove_joystick()
 	var dialog = dialog_scene11.instantiate()
+	dialog.player = self
 	add_sibling(dialog)
 	
-	joystick_control.show()
-	joystick_canvas_layer.show()
-	#add_sibling(replaced_joystick)
+	#spawn_joystick()
 	
 func show_dialog12():
-	#joystick_control.queue_free()
-	joystick_control.hide()
-	joystick_canvas_layer.hide()
-	#replaced_joystick.queue_free()
+	remove_joystick()
 	var dialog = dialog_scene12.instantiate()
+	dialog.player = self
 	add_sibling(dialog)
 	
-	joystick_control.show()
-	joystick_canvas_layer.show()
-	#add_sibling(replaced_joystick)
+	#spawn_joystick()
 	
 func show_dialog13():
-	#joystick_control.queue_free()
-	joystick_control.hide()
-	joystick_canvas_layer.hide()
-	#replaced_joystick.queue_free()
+	remove_joystick()
 	var dialog = dialog_scene13.instantiate()
+	dialog.player = self
 	add_sibling(dialog)
 	
-	joystick_control.show()
-	joystick_canvas_layer.show()
-	#add_sibling(replaced_joystick)
+	#spawn_joystick()
 	
 func show_dialog14():
-	#joystick_control.queue_free()
-	joystick_control.hide()
-	joystick_canvas_layer.hide()
-	#replaced_joystick.queue_free()
+	remove_joystick()
 	var dialog = dialog_scene14.instantiate()
+	dialog.player = self
 	add_sibling(dialog)
 	
-	joystick_control.show()
-	joystick_canvas_layer.show()
-	#add_sibling(replaced_joystick)
+	#spawn_joystick()
 	
 	
 func show_dialog15():
-	#joystick_control.queue_free()
-	joystick_control.hide()
-	joystick_canvas_layer.hide()
-	#replaced_joystick.queue_free()
+	remove_joystick()
 	var dialog = dialog_scene15.instantiate()
+	dialog.player = self
 	add_sibling(dialog)
 	
-	joystick_control.show()
-	joystick_canvas_layer.show()
-	#add_sibling(replaced_joystick)
+	#spawn_joystick()
 	
 func show_dialog16():
-	#joystick_control.queue_free()
-	joystick_control.hide()
-	joystick_canvas_layer.hide()
-	#replaced_joystick.queue_free()
-	var dialog = dialog_scene16.instantiate()
-	add_sibling(dialog)
+	remove_joystick()
 	
-	joystick_control.show()
-	joystick_canvas_layer.show()
-	#add_sibling(replaced_joystick)
-
+	var dialog = dialog_scene16.instantiate()
+	dialog.player = self
+	add_sibling(dialog)
+	#spawn_joystick()
 func _on_timer_timeout() -> void:
 	minus_score.hide()
 

@@ -21,6 +21,7 @@ extends Control
 
 @onready var dialog_scene15 = preload("res://main scenes/joystick_after_disappear.tscn")
 
+var player
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -70,4 +71,6 @@ func _on_timer_timeout() -> void:
 func _on_ok_button_pressed() -> void:
 	#var dialog = dialog_scene15.instantiate()
 	#add_sibling(dialog)
+	if player != null:
+		player.spawn_joystick()
 	control.queue_free()
